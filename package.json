@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/N237097/chat_server/issues"
   },
-  "homepage": "https://github.com/N237097/chat_server#readme"
+  "homepage": "https://github.com/N237097/chat_server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
 }
