@@ -10,6 +10,7 @@ io.on('connection', function(socket){
   console.log('a user connected');
   socket.on("disconnectiona", function(){
     console.log("Lappen disconnected");
+  })
 });
 
 http.listen(3000, function(){
