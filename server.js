@@ -8,7 +8,7 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
   console.log('a user connected');
-  socket.on("disconnection", function(){
+  socket.on("disconnect", function(){
     console.log("Lappen disconnected");
   })
 });
