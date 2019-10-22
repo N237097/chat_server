@@ -6,6 +6,10 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/index.js', function(req, res){
+  res.sendFile(__dirname + '/index.js');
+});
+
 io.on('connection', function(socket){
   console.log('a user connected');
   socket.on("disconnect", function(){
