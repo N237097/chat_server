@@ -18,13 +18,19 @@ app.get('/socket.io/socket.io.js', (req, res) => {
   res.send(__dirname + '/socket.io/socket.io.js');
 });
 
+var username = {}
+
 io.on('connection', function(socket){
   console.log('a user connected');
   socket.on("disconnect", function(){
     console.log("Lappen disconnected");
   });
+  socket.on("username", function(user){
+    username[socket.id] = user;
+  })
   socket.on("chat message", function(msg){
-    console.log("User: " + msg);
+    console.log(username[socket.id] + ": " + msg);
+    io.emit("chat message", username[socket.id] + ': ' + msg);
   });
 });
 
