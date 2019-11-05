@@ -25,12 +25,12 @@
 
 
 * { margin: 0; padding: 0; box-sizing: border-box;} 
-body { font: 13px Helvetica, Arial; background-color: #3e404f;}
+body { font: 13px Helvetica, Arial; background-color: #3e404f;width:80%;}
 form { background: #3c3c3c; padding: 3px; position: fixed; bottom: 0; width: 80%;  }
 form input { border: 0; padding: 10px; width: 90%; margin-right: .5%;  -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility; }
 form button { width: 9.5%; background: #BAB64D; border: none; padding: 10px; }
-#messages { list-style-type: none; margin: 0; padding: 0; width: 80% }
-#messages li { padding: 7px 10px; width: 80% }
-#messages li:nth-child(odd) { background: #eee; width: 80%; }
+#messages { list-style-type: none; margin: 0; padding: 0;}
+#messages li { padding: 7px 10px;}
+#messages li:nth-child(odd) { background: #eee; }
 
