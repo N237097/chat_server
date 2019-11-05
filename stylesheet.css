@@ -29,6 +29,6 @@ form input { border: 0; padding: 10px; width: 90%; margin-right: .5%;  -webkit-f
     text-rendering: optimizelegibility; }
 form button { width: 9.5%; background: #BAB64D; border: none; padding: 10px; }
 #messages { list-style-type: none; margin: 0; padding: 0; width: 80% }
-#messages li { padding: 7px 10px; }
-#messages li:nth-child(odd) { background: #eee;  }
+#messages li { padding: 7px 10px; width: 80% }
+#messages li:nth-child(odd) { background: #eee; width: 80%; }
 
