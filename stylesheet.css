@@ -1,3 +1,7 @@
+.messagescroll{
+    overflow: auto;
+}
+
 .bar{
     border: 5px;
     position: fixed;
@@ -6,7 +10,6 @@
     height: 100%;
     width: 20%;
     align-content: center;
-    /*卐*/
 }
 .names{
     text-align: center;
@@ -24,13 +27,54 @@
 }
 
 
-* { margin: 0; padding: 0; box-sizing: border-box;} 
-body { font: 13px Helvetica, Arial; background-color: #3e404f;width:80%;}
-form { background: #3c3c3c; padding: 3px; position: fixed; bottom: 0; width: 80%;  }
-form input { border: 0; padding: 10px; width: 90%; margin-right: .5%;  -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility; }
-form button { width: 9.5%; background: #BAB64D; border: none; padding: 10px; }
-#messages { list-style-type: none; margin: 0; padding: 0;width: 80%;}
-#messages li { padding: 7px 10px;}
-#messages li:nth-child(odd) { background: #eee; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font: 13px Helvetica, Arial;
+    background-color: #3e404f;
+    width:80%;
+}
+
+form {
+    background: #3c3c3c;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+}
+
+form input {
+    border: 0;
+    padding: 10px;
+    width: 90%;
+    margin-right: .5%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+form button {
+    width: 9%;
+    background: #BAB64D;
+    border: none;
+    padding: 10px;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+
+#messages li {
+    padding: 10px 10px;
+    background: lightslategray;
+}
+
+#messages li:nth-child(odd) {
+    background: #eee;
+}
 
