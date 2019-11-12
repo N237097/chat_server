@@ -10,6 +10,8 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+var username = {}
+
 app.get('/', function(req, res){
   if(req.cookies.username){
     res.sendFile(__dirname + '/index.html');
@@ -37,7 +39,6 @@ app.get('/socket.io/socket.io.js', (req, res) => {
   res.sendFile(__dirname + '/socket.io/socket.io.js');
 });
 
-var username = {}
 
 io.on('connection', function(socket){
   username[socket.id] = cookie.parse(socket.handshake.headers.cookie).username
@@ -47,9 +48,7 @@ io.on('connection', function(socket){
   socket.once("disconnect", function(){
     console.log(username[socket.id] + " disconnected");
     updateUsers()
-  });
-
-  //TODO Switch from socket.id to LocalStorage or Cookies 
+  }); 
 
   socket.on("chat message", function(msg){
     console.log(username[socket.id] + ": " + msg);
