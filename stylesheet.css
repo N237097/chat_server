@@ -15,7 +15,7 @@
     text-align: center;
     font: cursive;
     position: sticky;
-   
+    list-style-type: none;
 }
 
 .whiteBox{
